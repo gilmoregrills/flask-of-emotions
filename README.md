@@ -16,3 +16,5 @@ What is required:
 - One of the apps should use a REST API of the other app (so you must create two apps)
 - At least one of the apps should have auto-scaling enabled.
 Please attend the lab today to find out more!
+
+rhc app-create emotion python-2.7 --from-code https://github.com/gilmoregrills/flask-of-emotions
