@@ -1,6 +1,6 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 import os
-#maybe change venv back to virtenv like it was originally??
 virtenv = os.environ['APPDIR'] + '/venv/'
 os.environ['PYTHON EGG CACHE'] = os.path.join(virtenv, 'lib/python2.7/site−packages')
 virtualenv = os.path.join(virtenv, 'bin/activate this.py')
