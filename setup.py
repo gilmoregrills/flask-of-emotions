@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='rwfy3apitest1',
+setup(name='emotion',
       version='1.0',
       description='Flask OpenShift App',
       author='Robin Yonge',
