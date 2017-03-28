@@ -6,5 +6,5 @@ setup(name='emotion',
       author='Robin Yonge',
       author_email='lol',
       url='https://www.python.org/community/sigs/current/distutils-sig',
-      install_requires=['’Flask’,’flask-wtf’,’flask-babel’,’markdown’,’flup’,’bokeh’'],
+      install_requires=['’flask’,’Flask’,’flask-wtf’,’flask-babel’,’markdown’,’flup’,’bokeh’'],
       )
