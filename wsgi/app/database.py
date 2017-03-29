@@ -3,8 +3,9 @@ from flask_pymongo import PyMongo
 from flask import jsonify
 import os
 
-#app.config['MONGO_DBNAME'] = os.environ['OPENSHIFT_APP_NAME']
+app.config['MONGO_DBNAME'] = os.environ['OPENSHIFT_APP_NAME']
 app.config['MONGO_URI'] = os.environ['OPENSHIFT_MONGODB_DB_URL']
+print(MONGO_URI)
 
 mongo = PyMongo(app)
 
