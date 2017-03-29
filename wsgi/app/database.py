@@ -4,7 +4,7 @@ from flask import jsonify
 import os
 
 app.config['MONGO_DBNAME'] = os.environ['OPENSHIFT_APP_NAME']
-app.config['MONGO_URI'] = os.environ['OPENSHIFT_MONGODB_DB_URL'] + app.config['MONGO_DBNAME']
+app.config['MONGO_URI'] = os.environ['OPENSHIFT_MONGODB_DB_URL']
 
 mongo = PyMongo(app)
 
@@ -14,7 +14,11 @@ def get_all_databases():
 
 @app.route('/database/people', methods=['GET'])
 def get_all_people():
-    coolPeople = mongo.db.coolPeople
-    lamePeople = mongo.db.lamePeople
-    output = [coolPeople + lamePeople]
+    collection1 = mongo.db.people.coolPeople
+    collection2 = mongo.db.people.lamePeople
+    output = []
+    for doc in collection1.find():
+        output.append({'name' : doc['name']})
+    for doc in collection2.find():
+        output.append({'name' : doc['name']})
     return jsonify({'result' : output})
