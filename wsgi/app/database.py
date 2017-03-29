@@ -16,7 +16,7 @@ def get_all_databases():
 def get_all_people():
     collection = mongo.db.people
     output = []
-    for doc in collection1.find():
+    for doc in collection.find():
         output.append({'name' : doc['name'], 'cool?' : doc['cool?']})
 
     return jsonify({'result' : output})
