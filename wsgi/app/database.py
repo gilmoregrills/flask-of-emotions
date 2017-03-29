@@ -11,3 +11,11 @@ mongo = PyMongo(app)
 @app.route('/database/collections', methods=['GET'])
 def get_all_databases():
     return jsonify({'result' : mongo.db.collection_names()})
+
+@app.route('/database/people', methods=['GET'])
+def get_all_people():
+    collection = mongo.db.people
+    output = []
+    for doc in collection.find():
+        output.append({'who' : doc['Name'], 'cool?' : doc['cool']})
+    return jsonify({'result' : output})
