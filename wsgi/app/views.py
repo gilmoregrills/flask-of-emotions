@@ -3,6 +3,7 @@ from flask import render_template, request
 import unirest
 from forms import MessageForm
 import simple
+import database
 
 @app.route('/')
 @app.route('/index/')
