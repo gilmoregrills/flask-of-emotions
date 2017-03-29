@@ -14,6 +14,7 @@ def get_all_databases():
 
 @app.route('/database/people', methods=['GET'])
 def get_all_people():
-    collection = mongo.db.people
-    output = [collection]
+    coolPeople = mongo.db.coolPeople
+    lamePeople = mongo.db.lamePeople
+    output = [coolPeople + lamePeople]
     return jsonify({'result' : output})
