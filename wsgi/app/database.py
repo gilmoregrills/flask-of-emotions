@@ -17,7 +17,8 @@ def get_all_people():
     collection = mongo.db.people
     output = []
     for doc in collection.find():
-        output.append({'name' : doc['name']})
-        output.append({'cool?' : doc['cool?']})
-
+        output.append({)
+        output.append('name' : doc['name'])
+        output.append('cool?' : doc['cool?'])
+        output.append(})
     return jsonify({'result' : output})
