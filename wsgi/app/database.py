@@ -14,13 +14,9 @@ def get_all_databases():
 
 @app.route('/database/people', methods=['GET'])
 def get_all_people():
-    collection1 = mongo.db.people.coolPeople
-    collection2 = mongo.db.people.lamePeople
+    collection = mongo.db.people
     output = []
-    output.append('cool people')
     for doc in collection1.find():
-        output.append({doc["name"]})
-    output.append('lame people')
-    for doc in collection2.find():
-        output.append({doc["name"]})
+        output.append({'name' : doc['name'], 'cool?' : doc['cool?']})
+
     return jsonify({'result' : output})
