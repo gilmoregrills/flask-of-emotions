@@ -17,8 +17,10 @@ def get_all_people():
     collection1 = mongo.db.people.coolPeople
     collection2 = mongo.db.people.lamePeople
     output = []
+    output.append('cool people')
     for doc in collection1.find():
         output.append({doc})
+    output.append('lame people')
     for doc in collection2.find():
         output.append({doc})
     return jsonify({'result' : output})
