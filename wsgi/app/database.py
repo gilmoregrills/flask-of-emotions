@@ -19,8 +19,8 @@ def get_all_people():
     output = []
     output.append('cool people')
     for doc in collection1.find():
-        output.append({doc['name']})
+        output.append({doc["name"]})
     output.append('lame people')
     for doc in collection2.find():
-        output.append({doc['name']})
+        output.append({doc["name"]})
     return jsonify({'result' : output})
