@@ -2,9 +2,16 @@
 {% block title %} Damn! {% endblock %}
 {% block content %}
       <h5 class="header col s12 light">Check out this phresh app written with Flask</h5>
-      <h5 class="header col s12 light">Click below to have this thing analyse the sentiment in some text</h5>
+      <h5 class="header col s12 light"></h5>
       </div>
       <div class="row center">
-	      <a href="{{ url_for('emotion') }}" id="download-button" class="btn-large waves-effect waves-light lilac">type ur feels<i class="material-icons right">input</i></a>
+	      <p>Click the button below, or the one marked EMOTION above to use our sentiment analysis tool. Simply input text and it will tell you the hidden meaning beneath the words!</p> 
+	      <a href="{{ url_for('emotion') }}" id="download-button" class="btn-small waves-effect waves-light lilac">type ur feels<i class="material-icons right">input</i></a>
+	      <p></p>
+	      <p>Alternatively, click here to look at a sweet graph and have a fun play with it.</p>
+	      <a href="{{ url_for('polynomial') }}" id="download-button" class="btn-small waves-effect waves-light lilac">get graphic<i class="material-icons right">input</i></a>
+	      <p></p>
+	      <p>Or even take a look at our most interesting database, a collection documenting who is or is not cool</p>
+	      <a href="{{ url_for('get_all_people') }}" id="download-button" class="btn-small waves-effect waves-light lilac">cool??<i class="material-icons right">input</i></a>
       </div>
 {% endblock %}
