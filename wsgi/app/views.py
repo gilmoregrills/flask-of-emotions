@@ -28,5 +28,3 @@ def emotion_post():
   		}
 	)
 	return render_template("my_form.html",mood=response.body['result']['sentiment'],form=MessageForm())
-
-
