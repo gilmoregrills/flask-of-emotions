@@ -1,8 +1,7 @@
+{% extends "base.html" %}
 {{ js_resources|indent(4)|safe }}
 {{ css_resources|indent(4)|safe }}
 {{ plot_script|indent(4)|safe }}
-
-{% extends "base.html" %}
 {% block title %} Graph Time {% endblock %}
 {% block content %}
     <!-- A simple form for changing the graph -->

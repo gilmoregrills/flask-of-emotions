@@ -19,7 +19,8 @@ def emotion_post():
 	msg = request.form['message']
 	response = unirest.post("https://community-sentiment.p.mashape.com/text/",
 	  headers={
-	    "X-Mashape-Key": "6VWQcE5umumsh9oLsHfFlOseFGbDp1caaUKjsnj6PJRqxZKslv",
+            #to be manually added afterwards
+	    "X-Mashape-Key": "",
 	    "Content-Type": "application/x-www-form-urlencoded",
     	"Accept": "application/json"
     	},
