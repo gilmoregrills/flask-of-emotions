@@ -1,10 +1,8 @@
 {% extends "base.html" %}
-{{ js_resources|indent(4)|safe }}
-{{ css_resources|indent(4)|safe }}
-{{ plot_script|indent(4)|safe }}
 {% block title %} Graph Time {% endblock %}
 {% block content %}
     <!-- A simple form for changing the graph -->
+    <p>Simply adjust these parameters and hit submit to generate a graph!</p>
     <p> Select your settings: </p>
     <form name="color_button" method='GET'>
         Color:
