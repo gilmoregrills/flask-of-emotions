@@ -4,16 +4,11 @@
 {% extends "base.html" %}
 {% block title %} Graph Time {% endblock %}
 {% block content %}
-    <script>
-    $(document).ready(function() {
-        $('select').material_select();
-	});
-    </script>
     <!-- A simple form for changing the graph -->
     <p>Simply adjust these parameters and hit submit to generate a graph!</p>
     <p> Select your settings: </p>
     <form name="color_button" method='GET'>
-        Color:
+	    <!--Color:-->
         <select name="color">
             <option {{ "selected" if color|indent(4)|safe == "Red" }} value="Red">Red</option>
             <option {{ "selected" if color|indent(4)|safe == "Green" }} value="Green">Green</option>
