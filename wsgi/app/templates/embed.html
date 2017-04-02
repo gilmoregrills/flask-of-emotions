@@ -8,6 +8,7 @@
     <p>Simply adjust these parameters and hit submit to generate a graph!</p>
     <p> Select your settings: </p>
     <form name="color_button" method='GET'>
+	    <!-- select doesn't work with Materialize without a non-CDN script -->
 	    <!--Color:-->
         <select name="color">
             <option {{ "selected" if color|indent(4)|safe == "Red" }} value="Red">Red</option>
